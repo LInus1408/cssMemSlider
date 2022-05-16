@@ -73,33 +73,3 @@
   /* order: 2; */
 }
 
-@media (max-width: 575px) {
-  body {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-  }
-  .container {
-    width: 95vw;
-  }
-  .container_control {
-    justify-content: center;
-    gap: 5%;
-  }
-  .slider {
-    gap: 10%;
-  }
-  .slider_pics {
-    display: flex;
-    height: 50%;
-  }
-}
-/* вруменно */
-
-.slider {
-  background-color: red;
-}
-.navigation {
-  background-color: green;
-}
-
