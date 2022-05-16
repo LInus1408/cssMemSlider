@@ -1,5 +1,15 @@
+#mem3:checked  + .slider_text {
+  color: yellow;
+}
+
+
 @import url('/normalize.css');
 @import url('/reset.css');
+
+
+#mem3:checked  + .slider_text {
+  color: yellow;
+}
 
 * {
   scroll-behavior: smooth;
@@ -29,7 +39,7 @@
 }
 .img {
   height: 100%;
-  width: 0%;
+  width: 100%;
   border-radius: 3%;
 }
 .img_mem_1 {
@@ -60,6 +70,7 @@
   display: flex;
   justify-content: flex-end;
   gap: 0.5%;
+  /* order: 2; */
 }
 
 @media (max-width: 575px) {
@@ -92,15 +103,3 @@
   background-color: green;
 }
 
-#mem1:checked {
-  margin-left: 125px;
-}
-#mem2:checked  .img{
-   width: 600px !important;
-}
-#mem3:checked {
-  margin-left: 125px;
-}
-#mem4:checked {
-  margin-left: 125px;
-}
