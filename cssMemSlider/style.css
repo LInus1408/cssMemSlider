@@ -36,25 +36,28 @@
   display: flex;
   width: 100%;
   justify-content: flex-end;
+  gap: 0.4%;
 }
 
 .control {
-  width: 30px;
-  height: 8px;
-  margin: 6px;
+  width: 1vw;
+  height: 0.6vw;
   cursor: pointer;
   background-color: orange;
   opacity: 0.8;
-  border-radius: 2%;
+  border-radius: 30%;
   transition: all 0.4s ease;
+  border: 0.5rem solid #25282a;
 }
-
+.control_last {
+  border-right: none;
+}
 .control:hover {
+  background-color: silver;
   opacity: 1;
-  transform:scale(1.1);
 }
 
-input[name="r"] {
+input[name="mem"] {
   display: none;
   visibility: hidden;
 }
@@ -75,20 +78,25 @@ input[name="r"] {
   height: 85%;
   border-radius: 1%;
 }
+.text {
+  transform: translateY(4vh);
+  line-height: 1.4rem;
+  color: white;
+}
 
-#r1:checked ~ .s1 {
+#val1:checked ~ .flip {
   margin-left: 0;
 }
 
-#r2:checked ~ .s1 {
+#val2:checked ~ .flip {
   margin-left: -25%;
 }
 
-#r3:checked ~ .s1 {
+#val3:checked ~ .flip {
   margin-left: -50%;
 }
 
-#r4:checked ~ .s1 {
+#val4:checked ~ .flip {
   margin-left: -75%;
 }
 
@@ -110,9 +118,20 @@ input[name="r"] {
     height: 40% !important;
   }
   .navigation_slider {
-    transform: translateY(-50vh);
+    transform: translateY(-52vh);
     justify-content: center;
 }
+  .navigation_slider { 
+    gap: 2%;
+  }
+  .control {
+    width: 4vw;
+    height: 3vw;
+  }
+  .text {
+    transform: translateY(9vh);
+    line-height: 1.3rem;
+  }
+
  }
 
- /* Временно */
