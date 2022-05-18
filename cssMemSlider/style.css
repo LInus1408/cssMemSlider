@@ -49,6 +49,7 @@
   transition: all 0.4s ease;
   border: 0.5rem solid #25282a;
 }
+
 .control_last {
   border-right: none;
 }
@@ -84,22 +85,32 @@ input[name="mem"] {
   color: white;
 }
 
-#val1:checked ~ .flip {
-  margin-left: 0;
-}
 
-#val2:checked ~ .flip {
+ #val1:checked ~ .slides > .flip {
+   margin-left: 0%;
+} 
+#val1:checked ~ .navigation_slider > .control-1 {
+  background-color: silver;
+} 
+ #val2:checked ~ .slides > .flip {
   margin-left: -25%;
-}
+} 
+#val2:checked ~ .navigation_slider > .control-2 {
+  background-color: silver;
+} 
 
-#val3:checked ~ .flip {
+ #val3:checked ~ .slides > .flip {
   margin-left: -50%;
 }
-
-#val4:checked ~ .flip {
+#val3:checked ~ .navigation_slider > .control-3 {
+  background-color: silver;
+} 
+#val4:checked ~ .slides > .flip {
   margin-left: -75%;
 }
-
+#val4:checked ~ .navigation_slider > .control-4 {
+  background-color: silver;
+} 
 @media (max-width: 575px) { 
   body {
     display: flex;
