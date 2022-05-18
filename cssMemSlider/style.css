@@ -1,0 +1,150 @@
+
+
+
+@import url('./normalize.css');
+@import url('./reset.css');
+
+* {
+  scroll-behavior: smooth;
+  transition: 0.3s;
+}
+
+.wallpaper {
+  background-color: #25282a; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.container {
+  width: 65%;
+  height: 95%;
+  display: flex;
+  justify-content: center;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+.navigation_slider {
+  transform: translateY(-10vh);
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  gap: 0.4%;
+}
+
+.control {
+  width: 1vw;
+  height: 0.6vw;
+  cursor: pointer;
+  background-color: orange;
+  opacity: 0.8;
+  border-radius: 30%;
+  transition: all 0.4s ease;
+  border: 0.5rem solid #25282a;
+}
+.control:active {
+  box-shadow: 0px 0px 100px 100px silver;
+}
+.control_last {
+  border-right: none;
+}
+.control:hover {
+  background-color: silver;
+  opacity: 1;
+}
+
+input[name="mem"] {
+  display: none;
+  visibility: hidden;
+}
+
+.slides {
+  width: 400%;
+  height: 100%;
+  display: flex;
+}
+
+.slide {
+  width: 25%;
+  transition: all 0.6s ease;
+}
+
+.img {
+  width: 100%;
+  height: 85%;
+  border-radius: 1%;
+}
+.text {
+  transform: translateY(4vh);
+  line-height: 1.4rem;
+  color: white;
+}
+
+
+ #val1:checked ~ .slides > .flip {
+   margin-left: 0%;
+} 
+#val1:checked ~ .navigation_slider > .control-1 {
+  background-color: silver;
+} 
+ #val2:checked ~ .slides > .flip {
+  margin-left: -25%;
+} 
+#val2:checked ~ .navigation_slider > .control-2 {
+  background-color: silver;
+} 
+
+ #val3:checked ~ .slides > .flip {
+  margin-left: -50%;
+}
+#val3:checked ~ .navigation_slider > .control-3 {
+  background-color: silver;
+} 
+#val4:checked ~ .slides > .flip {
+  margin-left: -75%;
+}
+#val4:checked ~ .navigation_slider > .control-4 {
+  background-color: silver;
+} 
+@media (max-width: 575px) { 
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  .wallpaper {
+    width: 95%;
+  }
+  .container {
+    width: 93%;
+  }
+  .slider {
+    height: 100%;
+  }
+  img {
+    height: 40% !important;
+  }
+  .navigation_slider {
+    transform: translateY(-52vh);
+    justify-content: center;
+}
+  .navigation_slider { 
+    gap: 2%;
+  }
+  .control {
+    width: 4vw;
+    height: 3vw;
+  }
+  .text {
+    transform: translateY(9vh);
+    line-height: 1.3rem;
+  }
+
+ }
+
